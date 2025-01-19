@@ -12,6 +12,9 @@ class Chat(models.Model):
     title = models.CharField(max_length=20)
     users = models.ManyToManyField(User, related_name='chats')
     
+    def isGroupChat(self):
+        return self.users.count() > 2
+    
     def __str__(self):
         return self.title
     

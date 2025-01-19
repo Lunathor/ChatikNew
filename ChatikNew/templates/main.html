@@ -1,4 +1,5 @@
 {% extends 'flatpages/default.html' %}
+{% load static %}
 {% block title %}
 Главная
 {% endblock title %}
@@ -22,5 +23,5 @@
         <button type="submit">Create Chat</button>
         </form>
 </section>
-<script src="{% static 'main.js' %}"></script>
 {% endblock content %}
+<script src="{% static 'main.js' %}"></script>
