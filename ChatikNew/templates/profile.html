@@ -1,0 +1,19 @@
+{% extends 'flatpages/default.html' %}
+{% block title %}
+Профиль
+{% endblock title %}
+{% block content %}
+<h2>Профиль</h2>
+<form id="profileForm" enctype="multipart/form-data">
+      <label for="profileLogin">Имя пользователя:</label>
+      <input type="text" id="profileLogin" name="username" required><br>
+      <label for="profileFirstName">Имя:</label>
+      <input type="text" id="profileFirstName" name="first_name" required><br>
+      <label for="profileLastName">Фамилия:</label>
+      <input type="text" id="profileLastName" name="last_name" required><br>
+      <label for="profilePhoto">Изображение:</label>
+      <input type="file" id="profilePhoto" name="photo"><br>
+      <button type="submit">Найти профиль</button>
+</form>
+<script src="{% static 'main.js' %}"></script>
+{% endblock content %}

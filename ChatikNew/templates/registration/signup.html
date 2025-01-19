@@ -1,0 +1,16 @@
+{% extends 'flatpages/default.html' %}
+{% block title %}
+{% endblock title %}
+{% block content %}
+<h1>Регистрация</h1>
+<form id="registerForm" enctype="multipart/form-data">
+    <input type="text" id="regUsername" placeholder="Login" required>
+    <input type="password" id="regPassword1" name="password1" placeholder="Password" required>
+    <input type="password" id="regPassword2" name="password2" placeholder="Password" required>
+    <input type="text" id="regFirstName" placeholder="First Name">
+    <input type="text" id="regLastName" placeholder="Last Name">
+    <input type="file" id="regProfilePhoto">
+    <button type="submit">Зарегистрироваться</button>
+</form>
+<script src="{% static 'main.js' %}"></script>
+{% endblock content %}

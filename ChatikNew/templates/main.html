@@ -1,0 +1,26 @@
+{% extends 'flatpages/default.html' %}
+{% block title %}
+Главная
+{% endblock title %}
+{% block content %}
+<section id="chatApp" style="display:none;">
+    <!-- User list -->
+    <div id="users"></div>
+    <!-- Chat list -->
+    <div id="chats"></div>
+    <!-- Chat window -->
+    <div id="chat">
+        <h2 id="chatTitle">Select a chat</h2> <!-- Название чата -->
+        <div id="messages"></div>
+        <input type="text" id="messageInput" placeholder="Type a message">
+        <button id="sendButton">Send</button>
+        </div>
+        <!-- Create Chat Form -->
+    <form id="createChatForm">
+        <label for="chatName">Chat Name:</label>
+        <input type="text" id="chatName" name="chatName" required>
+        <button type="submit">Create Chat</button>
+        </form>
+</section>
+<script src="{% static 'main.js' %}"></script>
+{% endblock content %}
