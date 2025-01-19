@@ -136,3 +136,6 @@ AUTH_USER_MODEL = 'chat.User'
 
 MEDIA_URL = '/gallery/images/'
 MEDIA_ROOT = BASE_DIR / 'gallery/images/'
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'

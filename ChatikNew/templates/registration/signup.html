@@ -1,16 +1,18 @@
 {% extends 'flatpages/default.html' %}
+{% load static %}
 {% block title %}
 {% endblock title %}
 {% block content %}
 <h1>Регистрация</h1>
-<form id="registerForm" enctype="multipart/form-data">
-    <input type="text" id="regUsername" placeholder="Login" required>
+<form id="registerForm" action="{% url 'signup' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" id="regUsername" name="username" placeholder="Login" required>
     <input type="password" id="regPassword1" name="password1" placeholder="Password" required>
     <input type="password" id="regPassword2" name="password2" placeholder="Password" required>
-    <input type="text" id="regFirstName" placeholder="First Name">
-    <input type="text" id="regLastName" placeholder="Last Name">
+    <input type="text" id="regFirstName" name="First Name" placeholder="First Name">
+    <input type="text" id="regLastName" name="Last Name" placeholder="Last Name">
     <input type="file" id="regProfilePhoto">
     <button type="submit">Зарегистрироваться</button>
 </form>
-<script src="{% static 'main.js' %}"></script>
 {% endblock content %}
+<script src="{% static 'main.js' %}"></script>
